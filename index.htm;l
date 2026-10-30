@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AVP College of Arts and Science, Tiruppur</title>
+  <meta name="description" content="AVP College of Arts and Science, Tiruppur – undergraduate and postgraduate programmes in arts, science, commerce and management, affiliated to Bharathiar University.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700&family=Newsreader:opsz,wght@6..72,500;6..72,700&display=swap" rel="stylesheet">
+  <style>
+:root{
+  --ink:#16222b; --muted:#4f5f6b; --bg:#ffffff; --tint:#eef3f4;
+  --teal:#0f4c5c; --teal-d:#0a3641; --gold:#e9a23b; --line:#d4dde1;
+  --serif:"Newsreader",Georgia,serif; --sans:"Hanken Grotesk",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{--ink:#e7eef1; --muted:#a6b5bd; --bg:#0e171c; --tint:#142229; --line:#26373f; --teal:#5fb3c6; --teal-d:#8fd0df}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;font:400 1.0625rem/1.65 var(--sans);color:var(--ink);background:var(--bg)}
+h1,h2{font-family:var(--serif);line-height:1.15;margin:0 0 .6em}
+h1{font-size:clamp(2.6rem,7vw,4.75rem);letter-spacing:-.02em}
+h2{font-size:clamp(1.8rem,4vw,2.5rem)}
+a{color:var(--teal)}
+.wrap{width:min(1100px,100% - 2.5rem);margin-inline:auto}
+.skip{position:absolute;left:-999px}
+.skip:focus{left:1rem;top:1rem;background:var(--gold);color:#000;padding:.5rem 1rem;z-index:10}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+
+.site-header{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);z-index:5}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.75rem 0}
+.brand{display:flex;align-items:center;gap:.75rem;text-decoration:none;color:var(--ink)}
+.mark{background:var(--teal);color:#fff;font:700 1rem var(--serif);padding:.55rem .6rem;border-radius:4px;letter-spacing:.04em}
+.brand-text{display:flex;flex-direction:column;line-height:1.2}
+.brand-text small{color:var(--muted)}
+.nav{display:flex;align-items:center;gap:1.4rem}
+.nav a{text-decoration:none;color:var(--ink);font-weight:500}
+.nav a:hover{color:var(--teal)}
+.menu-btn{display:none;background:none;border:1px solid var(--line);color:var(--ink);padding:.45rem .9rem;border-radius:4px;font:inherit}
+
+.btn{display:inline-block;background:var(--gold);color:#1b1300;font-weight:700;text-decoration:none;padding:.8rem 1.4rem;border:2px solid var(--gold);border-radius:4px;cursor:pointer;font-size:1rem}
+.btn:hover{filter:brightness(.95)}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--ink)}
+.btn.small{padding:.45rem 1rem}
+.nav .btn{color:#1b1300}
+
+.hero{padding:clamp(3rem,8vw,6rem) 0;background:var(--tint)}
+.hero-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:3rem;align-items:center}
+.lead{font-size:1.25rem;max-width:36rem;color:var(--muted)}
+.cta-row{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.8rem}
+.facts{margin:0;border-left:4px solid var(--gold);padding-left:1.5rem;display:grid;gap:1.1rem}
+.facts dt{color:var(--muted);font-size:.95rem}
+.facts dd{margin:0;font:500 1.35rem/1.3 var(--serif)}
+
+.section{padding:clamp(3rem,7vw,5rem) 0}
+.section.tint{background:var(--tint)}
+.two-col{display:grid;grid-template-columns:1fr 2fr;gap:3rem}
+.prose p{max-width:60ch;margin-top:0}
+.sub{color:var(--muted);margin-top:-.3rem}
+.note{color:var(--muted);font-size:.95rem;border-left:3px solid var(--line);padding-left:.8rem}
+
+.tabs{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.5rem 0}
+.tabs button{font:500 1rem var(--sans);padding:.55rem 1.1rem;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:999px;cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--teal);border-color:var(--teal);color:#fff}
+@media (prefers-color-scheme:dark){.tabs button[aria-selected="true"]{color:#06222b}}
+.course-list{list-style:none;padding:0;margin:0 0 1.5rem;display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.course-list li{background:var(--bg);padding:1rem 1.2rem}
+.course-list strong{display:block;font:500 1.15rem var(--serif)}
+.course-list span{color:var(--muted);font-size:.92rem}
+
+.ticks{padding-left:1.2rem}
+.ticks li::marker{color:var(--gold)}
+.steps{max-width:48rem;padding-left:1.4rem}
+.steps li{margin-bottom:.9rem;padding-left:.3rem}
+
+address{font-style:normal;line-height:1.9}
+form{display:grid;gap:1rem}
+label{display:grid;gap:.3rem;font-weight:500}
+input,select,textarea{font:inherit;padding:.65rem .8rem;border:1px solid var(--line);border-radius:4px;background:var(--bg);color:var(--ink)}
+input[aria-invalid="true"],select[aria-invalid="true"]{border-color:#c0392b}
+#form-status{margin:0;min-height:1.5em}
+
+.site-footer{background:var(--teal-d);color:#fff;padding:1.5rem 0;font-size:.95rem}
+.site-footer p{margin:0}
+@media (prefers-color-scheme:dark){.site-footer{background:#0a1216;color:#e7eef1}}
+
+@media (max-width:800px){
+  .hero-grid,.two-col{grid-template-columns:1fr}
+  .menu-btn{display:block}
+  .nav{display:none;position:absolute;left:0;right:0;top:100%;background:var(--bg);flex-direction:column;align-items:flex-start;padding:1rem 1.25rem;border-bottom:1px solid var(--line)}
+  .nav.open{display:flex}
+}
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap bar">
+      <a class="brand" href="#top" aria-label="AVP College home">
+        <span class="mark" aria-hidden="true">AVP</span>
+        <span class="brand-text">
+          <strong>AVP College of Arts and Science</strong>
+          <small>Tiruppur, Tamil Nadu</small>
+        </span>
+      </a>
+      <button class="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
+      <nav id="nav" class="nav">
+        <a href="#about">About</a>
+        <a href="#programmes">Programmes</a>
+        <a href="#campus">Campus</a>
+        <a href="#admissions">Admissions</a>
+        <a href="#contact" class="btn small">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="wrap hero-grid">
+        <div>
+          <h1>Learn here. Work anywhere.</h1>
+          <p class="lead">A co-educational arts and science college in Tiruppur, offering degree programmes in science, commerce, management and the humanities.</p>
+          <div class="cta-row">
+            <a class="btn" href="#admissions">How to apply</a>
+            <a class="btn ghost" href="#programmes">Browse programmes</a>
+          </div>
+        </div>
+        <dl class="facts" aria-label="College facts">
+          <div><dt>Established</dt><dd>2015</dd></div>
+          <div><dt>Affiliated to</dt><dd>Bharathiar University, Coimbatore</dd></div>
+          <div><dt>Type</dt><dd>Co-educational, private</dd></div>
+          <div><dt>Levels</dt><dd>Undergraduate and postgraduate</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="wrap two-col">
+        <h2>About the college</h2>
+        <div class="prose">
+          <p>AVP College of Arts and Science was set up in 2015 and is recognised by the Government of Tamil Nadu. It is affiliated to Bharathiar University and admits both men and women.</p>
+          <p>The college teaches across computing, life sciences, commerce, business, English and fashion, so students can pick a field that fits their plans.</p>
+          <p class="note">Replace this text with your vision, mission and a message from the principal.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section tint" id="programmes">
+      <div class="wrap">
+        <h2>Programmes</h2>
+        <p class="sub">Choose a department to see its courses.</p>
+        <div class="tabs" role="tablist" aria-label="Departments" id="tabs"></div>
+        <ul class="course-list" id="courses" aria-live="polite"></ul>
+        <p class="note">Check the current list and seat availability with the college office before applying.</p>
+      </div>
+    </section>
+
+    <section class="section" id="campus">
+      <div class="wrap two-col">
+        <h2>Campus life</h2>
+        <div class="prose">
+          <p>Add photos and details of classrooms, laboratories, library, sports, hostel and transport here.</p>
+          <ul class="ticks">
+            <li>Computer and science laboratories</li>
+            <li>Library and reading room</li>
+            <li>Sports and cultural activities</li>
+            <li>Scholarships for deserving students</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section tint" id="admissions">
+      <div class="wrap">
+        <h2>Admissions</h2>
+        <ol class="steps">
+          <li><strong>Pick a course.</strong> Check the eligibility for the programme you want.</li>
+          <li><strong>Collect the form.</strong> Get the application form from the college office or website.</li>
+          <li><strong>Submit your documents.</strong> Bring your mark sheets, transfer certificate, community certificate and passport-size photographs.</li>
+          <li><strong>Confirm your seat.</strong> Admission is based on marks in your qualifying exam.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="wrap two-col">
+        <div>
+          <h2>Contact</h2>
+          <address>
+            AVP College of Arts and Science<br>
+            Tiruppur, Tamil Nadu<br>
+            <a href="tel:+917598762876">75987 62876</a><br>
+            <a href="tel:+917200677755">72006 77755</a><br>
+            <a href="http://avpcas.org/" target="_blank" rel="noopener">avpcas.org</a>
+          </address>
+          <p class="note">Confirm the full postal address and phone numbers before publishing.</p>
+        </div>
+        <form id="enquiry" novalidate>
+          <label>Name <input name="name" required autocomplete="name"></label>
+          <label>Phone <input name="phone" type="tel" required autocomplete="tel"></label>
+          <label>Course of interest
+            <select name="course" id="course-select" required></select>
+          </label>
+          <label>Message <textarea name="message" rows="3"></textarea></label>
+          <button class="btn" type="submit">Send enquiry</button>
+          <p id="form-status" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>&copy; <span id="year"></span> AVP College of Arts and Science, Tiruppur. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+// Course data — edit this list to update the Programmes section and enquiry form.
+const departments = {
+  "Computer Science & IT": [
+    { name: "B.Sc Computer Science", level: "Undergraduate" },
+    { name: "B.Sc Computer Science with Data Analytics", level: "Undergraduate" },
+    { name: "B.Sc Information Technology", level: "Undergraduate" },
+    { name: "M.Sc Computer Science", level: "Postgraduate" }
+  ],
+  "Science": [
+    { name: "B.Sc Mathematics", level: "Undergraduate" },
+    { name: "B.Sc Biotechnology", level: "Undergraduate" },
+    { name: "B.Sc Costume Design and Fashion", level: "Undergraduate" }
+  ],
+  "Commerce & Management": [
+    { name: "B.Com", level: "Undergraduate" },
+    { name: "B.Com Computer Applications", level: "Undergraduate" },
+    { name: "B.Com International Business", level: "Undergraduate" },
+    { name: "BBA", level: "Undergraduate" }
+  ],
+  "Arts": [
+    { name: "B.A English Literature", level: "Undergraduate" }
+  ]
+};
+
+const tabsEl = document.getElementById("tabs");
+const listEl = document.getElementById("courses");
+
+function showDepartment(name) {
+  listEl.innerHTML = "";
+  departments[name].forEach(c => {
+    const li = document.createElement("li");
+    const s = document.createElement("strong");
+    const l = document.createElement("span");
+    s.textContent = c.name;
+    l.textContent = c.level;
+    li.append(s, l);
+    listEl.appendChild(li);
+  });
+  tabsEl.querySelectorAll("button").forEach(b =>
+    b.setAttribute("aria-selected", String(b.textContent === name))
+  );
+}
+
+Object.keys(departments).forEach(name => {
+  const b = document.createElement("button");
+  b.type = "button";
+  b.setAttribute("role", "tab");
+  b.textContent = name;
+  b.addEventListener("click", () => showDepartment(name));
+  tabsEl.appendChild(b);
+});
+showDepartment(Object.keys(departments)[0]);
+
+// Enquiry form course dropdown
+const select = document.getElementById("course-select");
+select.innerHTML = '<option value="">Select a course</option>';
+Object.values(departments).flat().forEach(c => {
+  const o = document.createElement("option");
+  o.value = o.textContent = c.name;
+  select.appendChild(o);
+});
+
+// Mobile menu
+const menuBtn = document.querySelector(".menu-btn");
+const nav = document.getElementById("nav");
+menuBtn.addEventListener("click", () => {
+  const open = nav.classList.toggle("open");
+  menuBtn.setAttribute("aria-expanded", String(open));
+});
+nav.addEventListener("click", e => {
+  if (e.target.tagName === "A") {
+    nav.classList.remove("open");
+    menuBtn.setAttribute("aria-expanded", "false");
+  }
+});
+
+// Enquiry form: validates, then opens the visitor's email app.
+// Replace COLLEGE_EMAIL with the real address, or connect a form service (Formspree, Google Forms).
+const COLLEGE_EMAIL = "info@example.com";
+const form = document.getElementById("enquiry");
+const statusEl = document.getElementById("form-status");
+form.addEventListener("submit", e => {
+  e.preventDefault();
+  let ok = true;
+  ["name", "phone", "course"].forEach(n => {
+    const f = form.elements[n];
+    const bad = !f.value.trim();
+    f.setAttribute("aria-invalid", String(bad));
+    if (bad) ok = false;
+  });
+  if (!ok) { statusEl.textContent = "Fill in your name, phone number and course."; return; }
+  const d = new FormData(form);
+  const body = `Name: ${d.get("name")}\nPhone: ${d.get("phone")}\nCourse: ${d.get("course")}\n\n${d.get("message")}`;
+  window.location.href = `mailto:${COLLEGE_EMAIL}?subject=${encodeURIComponent("Admission enquiry")}&body=${encodeURIComponent(body)}`;
+  statusEl.textContent = "Your email app should open with the enquiry ready to send.";
+});
+
+document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
